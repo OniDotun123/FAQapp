@@ -8,7 +8,7 @@ import {Question} from '../../models/Question'
 })
 export class AddQuestionComponent implements OnInit {
   @Output() questionAdded = new EventEmitter<Question>();
-  
+
   text:string;
   answer:string;
 
@@ -19,6 +19,6 @@ export class AddQuestionComponent implements OnInit {
   }
 
   addQuestion(){
-    this.questionAdded.emit({text:this.text, answer:this.answer, hide:true})
+    this.questionAdded.emit({text:this.text, answer:this.answer,hide:true})
   };
 }

@@ -21,12 +21,16 @@ questions:Question[];
         text:"what is your favorite language?",
         answer:"my fav language is JS",
         hide:true
-      },
+      }
     ];
   }
 
   getQuestions(){
     return this.questions;
+  };
+
+  addQuestion(question:Question){
+      this.questions.unshift(question);
   };
 
 }
