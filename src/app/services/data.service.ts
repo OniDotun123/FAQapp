@@ -6,7 +6,7 @@ export class DataService {
 questions:Question[];
 
   constructor() {
-    this.questions = [
+   this.questions = [
       {
         text:"what is your name?",
         answer:"my name is dotun",
@@ -32,5 +32,14 @@ questions:Question[];
   addQuestion(question:Question){
       this.questions.unshift(question);
   };
+
+  removeQuestion(question:Question){
+    for(let i=0;i < this.questions.length;i++){
+      if(question == this.questions[i]){
+        this.questions.splice(i,1);
+      }
+    }
+
+  }
 
 }
