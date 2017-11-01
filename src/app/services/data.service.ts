@@ -54,10 +54,7 @@ questions:Question[];
         questions = JSON.parse(localStorage.getItem('questions'));
        //Add new question
         questions.unshift(question);
-
         localStorage.setItem('questions',JSON.stringify(questions));
-
-
       }
     }
 
@@ -66,9 +63,9 @@ questions:Question[];
       for(let i=0;i < this.questions.length;i++){
         if(question == this.questions[i]){
           this.questions.splice(i,1);
+          localStorage.setItem('questions', JSON.stringify(this.questions))
         }
       }
-
     }
 
   }
